@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classic Student Group</title>
+  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="jquery.min.js"></script>
+  <script src="popper.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    function do_message()
+    {
+      
+      var count = parseInt($("#msg").text());
+      count += 1;
+      $("#msg").text(count);
+
+    }
+    function do_noti()
+    {
+
+      var count = parseInt($("#noti").text());
+      count -= 1;
+      $("#noti").text(count);
+      
+    }
+  </script>
+</head>
+<body>
+
+  
+<div class="container">
+    <h2>Bootstrap Badge & jQuery </h2>
+    <button type="button" class="btn btn-primary" onclick="do_message()">
+      Messages <span class="badge badge-light" id="msg">4</span>
+    </button>
+    <button type="button" class="btn btn-danger" onclick="do_noti()">
+      Notifications <span class="badge badge-light" id="noti">7</span>
+    </button>
+</div> 
+
+</body>
+</html>
